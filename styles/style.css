@@ -16,3 +16,33 @@ h1{
     width: 100px;
     height: 100px;
 }
+
+.o{
+    position: relative;
+}
+
+.o::after{
+    content: "\274C";
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 100px;
+}
+
+.x{
+    position: relative;
+}
+
+.x::after{
+    content: "\2B55";
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 100px;
+}
