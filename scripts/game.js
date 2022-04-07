@@ -2,6 +2,7 @@ let board = ['','','','','','','','',''];
 let playerTime = 0;
 let symbols = ['o', 'x'];
 let gameOver = false;
+let move = 0;
 let winState = [
     [0, 1, 2],
     [3, 4, 5],
@@ -18,6 +19,8 @@ function handleMove(position){
         board[position] = symbols[playerTime];
         
         playerTime = (playerTime == 0)? 1 : 0;
+        move += 1;
+        console.log(move)
     }
 }
 
@@ -35,7 +38,7 @@ function isWin(){
                
             setTimeout(() => {
                 alert(`Player ${playerTime + 1} Wins!`)
-            }, 1)
+            }, 10)
 
             gameOver = true;
         }
@@ -43,5 +46,16 @@ function isWin(){
 }
 
 function noWinner(){
-    
+    if(move == 9 && !gameOver){
+        setTimeout(() => {
+            alert('The game had no winners')
+        }, 10)
+        
+        board = ['','','','','','','','',''];
+        playerTime = 0;
+        gameOver = false;
+        move = 0;
+        console.log("DSADASDSA")
+        return true;
+    }
 }

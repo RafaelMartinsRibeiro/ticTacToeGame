@@ -1,20 +1,50 @@
 body{
     background-color: rgb(22, 22, 22);
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
     color: rgb(0, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 1px rgba(0, 255, 255, 0.192);
 }
 
 .square{
     background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(0, 255, 255);
     margin: 1px;
     display: inline-block;
     width: 100px;
     height: 100px;
+    border: 2px solid rgb(0, 255, 255);
+    cursor: pointer;
+}
+
+.square:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+#reset{
+    background-color: white;
+    color: rgb(22, 22, 22);
+    margin-top: 10px;
+    padding: 10px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 1000;
+    border: 3px solid rgb(0, 255, 255);
+    border-radius: 40px;
+    outline-style: none;
+    cursor: pointer;
+}
+
+#reset:hover{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(0, 255, 255);
+}
+
+#reset:active{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(0, 187, 187);
 }
 
 .o{
