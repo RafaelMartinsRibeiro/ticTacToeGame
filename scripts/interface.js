@@ -10,20 +10,15 @@ function handleClick(){
     let position = this.id;
 
     handleMove(position);
-    updateSquares();
-
+    updateSquare(position);
+    isWin();
+    noWinner();
 }
 
-function updateSquares(){
-    let squares = document.querySelectorAll(".square");
+function updateSquare(position){
+    let square = document.getElementById(position.toString());
 
-    squares.forEach((square) =>{
-        let position = square.id;
+    let symbol = board[position];
 
-        let symbol = board[position];
-
-        if(symbol != ''){
-            square.innerHTML = `<div class="${symbol}"></div>`;
-        }
-    })
+    square.innerHTML = `<div class="${symbol}"></div>`;
 }
