@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     newGame.addEventListener("click", resetSquares);
 })
+let playerScore = document.querySelectorAll(".playerScore");
+
 
 function handleClick(){
     let position = this.id;
@@ -18,6 +20,7 @@ function handleClick(){
     if(noWinner()){
         resetSquares();
     }
+    updateScore();
 }
 
 function updateSquare(position){
@@ -26,6 +29,12 @@ function updateSquare(position){
     let symbol = board[position];
 
     square.innerHTML = `<div class="${symbol}"></div>`;
+}
+
+function updateScore(){
+    addScore();
+    playerScore[0].innerText = `${PlayerScore1}`
+    playerScore[1].innerText = `${PlayerScore2}`
 }
 
 function resetSquares(){
