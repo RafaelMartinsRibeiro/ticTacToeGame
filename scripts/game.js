@@ -1,5 +1,7 @@
 let board = ['','','','','','','','',''];
 let playerTime = 0;
+let PlayerScore1 = 0;
+let PlayerScore2 = 0;
 let symbols = ['o', 'x'];
 let gameOver = false;
 let move = 0;
@@ -57,5 +59,13 @@ function noWinner(){
         move = 0;
         console.log("DSADASDSA")
         return true;
+    }
+}
+
+function addScore(){
+    if(gameOver && playerTime == 0){
+        PlayerScore1 += 1;
+    } else if(gameOver && playerTime == 1){
+        PlayerScore2 += 1;
     }
 }

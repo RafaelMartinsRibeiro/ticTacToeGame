@@ -47,6 +47,23 @@ h1{
     background-color: rgb(0, 187, 187);
 }
 
+.scoreboard{
+    margin: auto;
+    width: 50%;
+    font-size: 30px;
+}
+
+.scoreboard table{
+    color: aqua;
+    
+    width: 100%;
+    margin-top: 20px;
+}
+
+.scoreboard td{
+    color: white;
+}
+
 .o{
     position: relative;
 }
