@@ -51,5 +51,4 @@ function resetSquares(){
             square.innerHTML = '';
         })
     }, 20)
-       
 }
